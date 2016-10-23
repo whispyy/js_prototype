@@ -2,11 +2,23 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<title>WebAvance</title>
-	<script src="script.js"></script>
+	<title>WebAvance JS</title>
+	<!--<script src="script.js"></script>-->
+	<script src="Etudiant.js"></script>
 </head>
 <body>
-	<h1>Prototype Test</h1>
+	<h1>Prototype + Classes</h1>
+	<script type="text/javascript">
+		var p = document.createElement('p');
+		var etudiant = new Etudiant('Durand','JF',5,[12,15,15]);
+		p.innerHTML= "Etudiant : "+etudiant.getName()+", "+etudiant.getPrenom()+
+					 "<br />Nombre d'année d'études : "+etudiant.getAnnee()+
+					 "<br />Moyenne : "+etudiant.moyenne()
+					 ;
+
+		var doc = document.body;
+		doc.appendChild(p);
+	</script>
 </body>
 
 </html>
